@@ -1,0 +1,30 @@
+version: '3'
+services:
+    php:
+        build:
+            context: ./docker/php/
+            dockerfile: Dockerfile
+        ports:
+            - 8080:8080
+        volumes:
+            - ./:/var/www/html
+        depends_on:
+            - mysql
+    mysql:
+        image: mariadb:10
+        ports:
+            - 3306:3306
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=portal
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=user
+    nginx:
+        image: nginx
+        ports:
+            - 80:80
+        volumes:
+            - ./docker/nginx/:/etc/nginx/conf.d
+            - ./:/var/www/html
+        depends_on:
+            - php

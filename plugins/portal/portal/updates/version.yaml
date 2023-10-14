@@ -1,0 +1,7 @@
+v1.0.1:
+    - First version of Portal
+    - create_categories_table.php
+    - create_courses_table.php
+    - create_tasks_table.php
+    - create_articles_table.php
+

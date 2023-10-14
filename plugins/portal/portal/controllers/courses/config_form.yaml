@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Course
+
+# Model Form Field configuration
+form: $/portal/portal/models/course/fields.yaml
+
+# Model Class name
+modelClass: Portal\Portal\Models\Course
+
+# Default redirect location
+defaultRedirect: portal/portal/courses
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: portal/portal/courses/update/:id
+    redirectClose: portal/portal/courses
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: portal/portal/courses
+    redirectClose: portal/portal/courses
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
