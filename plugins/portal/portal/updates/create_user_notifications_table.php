@@ -1,5 +1,6 @@
 <?php namespace Portal\Portal\Updates;
 
+use Portal\Portal\enums\NotificationTypes;
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -22,7 +23,7 @@ return new class extends Migration
             $table->string('text');
             $table->string('class');
             $table->string('status');
-            $table->string('type');
+            $table->string('type')->default(NotificationTypes::COMMON_NOTIFICATION);
             $table->timestamps();
         });
     }

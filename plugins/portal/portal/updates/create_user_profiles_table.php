@@ -1,5 +1,6 @@
 <?php namespace Portal\Portal\Updates;
 
+use Portal\Portal\enums\UserProfileFields;
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -19,7 +20,8 @@ return new class extends Migration
         Schema::create('portal_portal_user_profiles', function(Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string(UserProfileFields::COUNTRY, 1);
+            $table->string(UserProfileFields::EXPERIENCE, 1);
             $table->timestamps();
         });
     }

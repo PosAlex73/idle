@@ -21,7 +21,6 @@ return new class extends Migration
             $table->unsignedBigInteger('thread_id');
             $table->foreign('thread_id')->references('id')->on('portal_portal_user_threads');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('status', 1);
             $table->text('text');
             $table->timestamps();

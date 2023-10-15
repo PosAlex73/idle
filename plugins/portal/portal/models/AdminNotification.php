@@ -1,6 +1,7 @@
 <?php namespace Portal\Portal\Models;
 
 use Model;
+use RainLab\User\Models\User;
 
 /**
  * AdminNotification Model
@@ -20,4 +21,17 @@ class AdminNotification extends Model
      * @var array rules for validation
      */
     public $rules = [];
+
+    public $fillable = [
+        'title',
+        'text',
+        'class',
+        'type',
+        'status',
+        'user_id'
+    ];
+
+    public $belongsTo = [
+        'user' => User::class
+    ];
 }

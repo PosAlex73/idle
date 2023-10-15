@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('class');
             $table->string('type', 1);
             $table->string('status', 1);
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

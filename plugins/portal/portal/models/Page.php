@@ -1,21 +1,20 @@
 <?php namespace Portal\Portal\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Model;
 
 /**
- * Article Model
+ * Page Model
  *
  * @link https://docs.octobercms.com/3.x/extend/system/models.html
  */
-class Article extends Model
+class Page extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
     /**
      * @var string table name
      */
-    public $table = 'portal_portal_articles';
+    public $table = 'portal_portal_pages';
 
     /**
      * @var array rules for validation
@@ -26,12 +25,6 @@ class Article extends Model
         'title',
         'text',
         'status',
-        'category_id',
-        'image',
-        'type'
-    ];
-
-    public $belongsTo = [
-        'category' => CourseCategory::class
+        'url'
     ];
 }

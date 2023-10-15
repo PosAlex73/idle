@@ -1,5 +1,6 @@
 <?php namespace Portal\Portal\Updates;
 
+use Portal\Portal\enums\CommonStatuses;
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -18,6 +19,8 @@ return new class extends Migration
     {
         Schema::create('portal_portal_user_threads', function(Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->string('status', 1)->default(CommonStatuses::ACTIVE);
             $table->timestamps();
         });
     }

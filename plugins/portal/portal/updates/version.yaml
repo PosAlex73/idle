@@ -4,4 +4,15 @@ v1.0.1:
     - create_courses_table.php
     - create_tasks_table.php
     - create_articles_table.php
+    - create_app_news_table.php
+    - create_admin_notifications_table.php
+    - create_course_settings_table.php
+    - create_pages_table.php
+    - create_payments_table.php
+    - create_user_threads_table.php
+    - create_thread_messages_table.php
+    - create_user_notifications_table.php
+    - create_user_orders_table.php
+    - create_user_profiles_table.php
+    - create_user_settings_table.php
     - CommonSeeder.php

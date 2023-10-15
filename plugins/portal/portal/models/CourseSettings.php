@@ -20,4 +20,13 @@ class CourseSettings extends Model
      * @var array rules for validation
      */
     public $rules = [];
+
+    protected $fillable = [
+        'course_id',
+        'data'
+    ];
+
+    public $belongsTo = [
+        'course' => Course::class
+    ];
 }
