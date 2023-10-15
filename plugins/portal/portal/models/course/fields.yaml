@@ -6,3 +6,13 @@ fields:
     id:
         label: ID
         disabled: true
+    title:
+        label: Title
+        type: text
+    text:
+        label: Text
+        type: richeditor
+    category:
+        label: Category
+        type: relation
+        nameFrom: title

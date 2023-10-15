@@ -4,28 +4,31 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Courses Backend Controller
+ * Categories Backend Controller
  *
  * @link https://docs.octobercms.com/3.x/extend/system/controllers.html
  */
-class Courses extends Controller
+class Categories extends Controller
 {
     public $implement = [
+        \Backend\Behaviors\FormController::class,
         \Backend\Behaviors\ListController::class,
-        \Backend\Behaviors\FormController::class
     ];
+
+    /**
+     * @var string formConfig file
+     */
+    public $formConfig = 'config_form.yaml';
 
     /**
      * @var string listConfig file
      */
     public $listConfig = 'config_list.yaml';
 
-    public $formConfig = 'config_form.yaml';
-
     /**
      * @var array required permissions
      */
-    public $requiredPermissions = ['portal.portal.courses'];
+    public $requiredPermissions = ['portal.portal.categories'];
 
     /**
      * __construct the controller
@@ -34,6 +37,6 @@ class Courses extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Portal.Portal', 'portal', 'courses');
+        BackendMenu::setContext('Portal.Portal', 'portal', 'categories');
     }
 }

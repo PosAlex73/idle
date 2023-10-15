@@ -78,7 +78,37 @@ class Plugin extends PluginBase
                 'icon' => 'icon-leaf',
                 'permissions' => ['portal.portal.*'],
                 'order' => 500,
-            ],
+                'sideMenu' => [
+                    'courses' => [
+                        'label' => 'Courses',
+                        'url' => Backend::url('portal/portal/courses/index'),
+                        'icon' => 'icon-leaf',
+                        'permissions' => ['portal.portal.*'],
+                        'order' => 100
+                    ],
+                    'categories' => [
+                        'label' => 'Categories',
+                        'url' => Backend::url('portal/portal/categories/index'),
+                        'icon' => 'icon-leaf',
+                        'order' => 200,
+                        'permissions' => ['portal.portal.*'],
+                    ],
+                    'tasks' => [
+                        'label' => 'Tasks',
+                        'url' => Backend::url('portal/portal/tasks/index'),
+                        'icon' => 'icon-leaf',
+                        'order' => 300,
+                        'permissions' => ['portal.portal.*'],
+                    ],
+                    'articles' => [
+                        'label' => 'Articles',
+                        'url' => Backend::url('portal/portal/articles/index'),
+                        'icon' => 'icon-leaf',
+                        'order' => 300,
+                        'permissions' => ['portal.portal.*'],
+                    ]
+                ]
+            ]
         ];
     }
 }

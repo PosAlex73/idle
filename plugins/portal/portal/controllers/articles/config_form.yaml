@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+
+# Model Form Field configuration
+form: $/portal/portal/models/article/fields.yaml
+
+# Model Class name
+modelClass: Portal\Portal\Models\Article
+
+# Default redirect location
+defaultRedirect: portal/portal/articles
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: portal/portal/articles/update/:id
+    redirectClose: portal/portal/articles
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: portal/portal/articles
+    redirectClose: portal/portal/articles
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,21 +1,21 @@
 <?php namespace Portal\Portal\Models;
 
 use Model;
-use October\Rain\Database\Factories\HasFactory;
+use RainLab\User\Models\User;
 
 /**
- * Course Model
+ * UserThread Model
  *
  * @link https://docs.octobercms.com/3.x/extend/system/models.html
  */
-class Course extends Model
+class UserThread extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
     /**
      * @var string table name
      */
-    public $table = 'portal_portal_courses';
+    public $table = 'portal_portal_user_threads';
 
     /**
      * @var array rules for validation
@@ -23,21 +23,14 @@ class Course extends Model
     public $rules = [];
 
     public $fillable = [
-        'title',
-        'status',
-        'image',
-        'category_id'
+        'user_id'
     ];
 
     public $belongsTo = [
-        'category' => CourseCategory::class
-    ];
-
-    public $hasOne = [
-        'settings' => CourseSettings::class
+        'user' => User::class
     ];
 
     public $hasMany = [
-        'tasks' => Task::class
+        'userMessages' => ThreadMessage::class
     ];
 }
