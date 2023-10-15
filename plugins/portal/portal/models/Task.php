@@ -1,5 +1,6 @@
 <?php namespace Portal\Portal\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Model;
 use October\Rain\Database\Factories\HasFactory;
 
@@ -22,5 +23,7 @@ class Task extends Model
      */
     public $rules = [];
 
-
+    public $belongsTo = [
+        'course' => Course::class
+    ];
 }

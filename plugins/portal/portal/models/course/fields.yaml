@@ -2,17 +2,30 @@
 #  Form Field Definitions
 # ===================================
 
-fields:
-    id:
-        label: ID
-        disabled: true
-    title:
-        label: Title
-        type: text
-    text:
-        label: Text
-        type: richeditor
-    category:
-        label: Category
-        type: relation
-        nameFrom: title
+tabs:
+    stretch: true
+    defaultTab: Course
+
+    fields:
+        id:
+            label: ID
+            disabled: true
+            tab: Course
+        title:
+            label: Title
+            type: text
+            tab: Course
+        text:
+            label: Text
+            type: richeditor
+            tab: Course
+        category:
+            label: Category
+            type: relation
+            nameFrom: title
+            tab: Course
+        tasks:
+            label: tasks
+            type: relation
+            tab: Tasks
+            nameFrom: title
