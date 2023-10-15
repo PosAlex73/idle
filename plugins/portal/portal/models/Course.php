@@ -11,7 +11,6 @@ use October\Rain\Database\Factories\HasFactory;
 class Course extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use HasFactory;
 
     /**
      * @var string table name
@@ -22,4 +21,10 @@ class Course extends Model
      * @var array rules for validation
      */
     public $rules = [];
+
+    public $fillable = [
+        'title',
+        'status',
+        'image'
+    ];
 }

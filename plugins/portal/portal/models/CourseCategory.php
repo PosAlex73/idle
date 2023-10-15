@@ -4,14 +4,13 @@ use Model;
 use October\Rain\Database\Factories\HasFactory;
 
 /**
- * Category Model
+ * CourseCategory Model
  *
  * @link https://docs.octobercms.com/3.x/extend/system/models.html
  */
-class Category extends Model
+class CourseCategory extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use HasFactory;
 
     /**
      * @var string table name

@@ -1,7 +1,7 @@
 uuid: unittest-category-b022a74b
 type: structure
 handle: UnitTest\Category
-name: Category
+name: CourseCategory
 drafts: false
 
 structure:

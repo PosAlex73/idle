@@ -1,5 +1,5 @@
 -
-    name: Blog Category Data
+    name: Blog CourseCategory Data
     class: Tailor\Models\EntryRecordImport
     file: seeds/data/blog/category.json
     attributes:

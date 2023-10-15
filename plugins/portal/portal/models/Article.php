@@ -11,7 +11,6 @@ use Model;
 class Article extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use HasFactory;
 
     /**
      * @var string table name

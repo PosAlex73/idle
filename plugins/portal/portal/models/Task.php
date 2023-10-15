@@ -11,7 +11,6 @@ use October\Rain\Database\Factories\HasFactory;
 class Task extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use HasFactory;
 
     /**
      * @var string table name
