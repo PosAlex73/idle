@@ -1,5 +1,6 @@
 <?php namespace Portal\Portal\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Model;
 
 /**
@@ -10,6 +11,7 @@ use Model;
 class Article extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use HasFactory;
 
     /**
      * @var string table name

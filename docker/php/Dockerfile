@@ -9,4 +9,6 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions && \
     install-php-extensions intl opcache pdo_mysql readline soap sockets tokenizer xsl zip gd
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 WORKDIR /var/www/html

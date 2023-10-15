@@ -1,6 +1,7 @@
 <?php namespace Portal\Portal\Models;
 
 use Model;
+use October\Rain\Database\Factories\HasFactory;
 
 /**
  * Task Model
@@ -10,6 +11,7 @@ use Model;
 class Task extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use HasFactory;
 
     /**
      * @var string table name

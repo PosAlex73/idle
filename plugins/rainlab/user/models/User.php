@@ -1,5 +1,6 @@
 <?php namespace RainLab\User\Models;
 
+use October\Rain\Database\Factories\HasFactory;
 use Str;
 use Auth;
 use Mail;
@@ -14,6 +15,7 @@ use October\Rain\Auth\AuthException;
 class User extends UserBase
 {
     use \October\Rain\Database\Traits\SoftDelete;
+    use HasFactory;
 
     /**
      * @var string The database table used by the model.

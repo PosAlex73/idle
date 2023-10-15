@@ -1,7 +1,7 @@
 <?php namespace Portal\Portal\Updates\Factories;
 
-use Illuminate\Foundation\Testing\WithFaker;
 use October\Rain\Database\Factories\Factory;
+use Portal\Portal\enums\CommonStatuses;
 
 /**
  * ArticleFactory
@@ -15,8 +15,11 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
-
+        $f = \Faker\Factory::create();
         return [
+            'title' => $f->text(50),
+            'text' => $f->text(500),
+            'status' => CommonStatuses::ACTIVE
         ];
     }
 }

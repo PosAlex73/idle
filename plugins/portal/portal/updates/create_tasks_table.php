@@ -3,6 +3,7 @@
 use Portal\Portal\enums\CommonStatuses;
 use Portal\Portal\enums\TaskStatuses;
 use Portal\Portal\enums\TaskTypes;
+use Portal\Portal\Updates\Seeders\CommonSeeder;
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
@@ -29,6 +30,9 @@ return new class extends Migration
             $table->foreign('course_id')->references('id')->on('portal_portal_courses');
             $table->timestamps();
         });
+
+        $seeder = new CommonSeeder();
+        $seeder->run();
     }
 
     /**

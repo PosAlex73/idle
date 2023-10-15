@@ -13,8 +13,11 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $f = \Faker\Factory::create();
+
         return [
-            //
+            'name' => $f->firstName,
+            'email' => $f->email,
         ];
     }
 }
